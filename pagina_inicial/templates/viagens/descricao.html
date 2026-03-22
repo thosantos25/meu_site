@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destino: Rio de Janeiro</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container mt-5">
+        
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center mb-5 border-bottom pb-3">
+            <h1 class="text-success fw-bold mb-3 mb-md-0">Descubra o Rio de Janeiro</h1>
+            <a href="{% url 'inicio' %}" class="btn btn-outline-secondary">Voltar à Página Inicial</a>
+        </div>
+
+        <div class="row align-items-center mb-5">
+            <div class="col-md-6">
+                <h3 class="text-primary mb-3">A Cidade Maravilhosa te espera!</h3>
+                <p class="fs-5 text-muted">
+                    O Rio de Janeiro é um destino que dispensa apresentações. Famoso no mundo inteiro por sua beleza natural estonteante, o Rio mistura o verde da Mata Atlântica com o azul do mar de forma única.
+                </p>
+                <p>
+                    Aqui, você vai vivenciar a autêntica cultura carioca: muito samba, uma gastronomia rica, dias ensolarados na praia e uma vida noturna vibrante. Seja para relaxar nas areias de Ipanema, visitar museus no centro histórico ou se aventurar nas trilhas da Floresta da Tijuca, o Rio tem um roteiro perfeito para você.
+                </p>
+            </div>
+            <div class="col-md-6 mt-4 mt-md-0">
+                <img src="https://images.pexels.com/photos/2868242/pexels-photo-2868242.jpeg" alt="Praia e montanhas no Rio de Janeiro" class="img-fluid rounded shadow-lg">
+            </div>
+        </div>
+
+        <h3 class="mb-4 text-center fw-bold">Principais Atrações do Pacote</h3>
+        <div class="row g-4 mb-5">
+            
+            <div class="col-12 col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center mt-3">
+                        <h5 class="card-title text-primary fw-bold">Cristo Redentor</h5>
+                        <p class="card-text text-muted">Uma das Sete Maravilhas do Mundo Moderno. A vista do alto do Morro do Corcovado é simplesmente inesquecível e obrigatória em sua primeira visita.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center mt-3">
+                        <h5 class="card-title text-success fw-bold">Pão de Açúcar</h5>
+                        <p class="card-text text-muted">O famoso passeio de bondinho oferece uma vista panorâmica espetacular de 360º da Baía de Guanabara, das praias da zona sul e de toda a cidade.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body text-center mt-3">
+                        <h5 class="card-title text-warning fw-bold">Praias Famosas</h5>
+                        <p class="card-text text-muted">Dê um mergulho refrescante nas águas de Copacabana e Ipanema. Caminhe pelo famoso calçadão, tome uma água de coco e sinta o clima local.</p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+        <div class="text-center bg-light p-5 rounded-4 shadow-sm mb-5 border">
+            <h2 class="mb-3">Ficou com vontade de viajar?</h2>
+            <p class="lead mb-4">Temos pacotes exclusivos para o Rio de Janeiro com hotel, passagem aérea e passeios inclusos.</p>
+            
+            <a href="{% url 'contato' %}" class="btn btn-success btn-lg px-5 rounded-pill shadow">Falar com um Consultor</a>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
