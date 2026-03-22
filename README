@@ -1,0 +1,52 @@
+# ✈️ Projeto: Agência de Viagens (Django)
+
+Este é um projeto de uma aplicação web para uma Agência de Viagens, construído utilizando o framework **Django** (Python) e **Bootstrap 5** para o design da interface (Front-end). O projeto apresenta destinos turísticos, com foco especial no Rio de Janeiro.
+
+## 🛠️ Tecnologias Utilizadas
+
+* **Back-end:** Python 3, Django
+* **Front-end:** HTML5, CSS3, Bootstrap 5 (via CDN)
+* **Banco de Dados:** SQLite3 (Padrão do Django)
+
+## 🏗️ Estrutura e Funcionalidades
+
+O projeto é composto por três páginas principais interligadas através do sistema de rotas do Django:
+
+1.  **Página Inicial (`/`):** Apresentação da agência e destaque para a viagem ao Rio de Janeiro.
+2.  **Catálogo/Destinos (`/catalogo/`):** Galeria de destinos e pacotes de viagens.
+3.  **Descrição/Contato (`/contato/`):** Detalhes adicionais e informações de contato.
+
+## 🚀 Como o Projeto Foi Construído (Passo a Passo)
+
+A construção desta aplicação seguiu o fluxo de arquitetura MVT (Model-View-Template) do Django:
+
+### 1. Criação das Views (`views.py`)
+Para cada página do site, foi criada uma função responsável por receber a requisição do usuário e renderizar o arquivo HTML correspondente.
+* `pagina_inicial(request)`
+* `catalogo(request)`
+* `descricao(request)` *(Nota: Sem uso de acentuação para evitar erros de encoding)*
+
+### 2. Configuração das Rotas (`urls.py`)
+As URLs foram mapeadas para ligar o endereço digitado no navegador às Views correspondentes. Utilizamos o parâmetro `name=` para facilitar a criação de links dinâmicos nos templates.
+* `name='inicio'`
+* `name='destinos'`
+* `name='contato'`
+
+### 3. Sistema de Templates e Bootstrap
+Para tornar o site responsivo e visualmente atraente desde o início, integramos o framework **Bootstrap 5**. Utilizamos recursos como o sistema de Grid (colunas) e Cards para a organização das imagens e textos.
+
+### 4. Herança de Templates (DRY - Don't Repeat Yourself)
+Para evitar a repetição de código (como tags `<head>`, `<body>` e scripts do Bootstrap) e manter um **Menu de Navegação (Navbar)** fixo em todas as telas, implementamos a Herança de Templates do Django:
+* **`base.html`**: O arquivo principal ("esqueleto" ou "moldura") que contém o Menu, o Rodapé e a tag `{% block content %}`.
+* **Páginas filhas (`index.html`, `catalogo.html`, etc.)**: Utilizam a tag `{% extends 'viagens/base.html' %}` para herdar o visual da base e injetam seu conteúdo exclusivo dentro do bloco de conteúdo.
+
+### 5. Arquivos Estáticos e Imagens
+Integração de imagens externas utilizando links diretos (ex: Pexels) e preparação para o uso de arquivos estáticos geridos pelo próprio Django através da tag `{% load static %}`.
+
+## ⚙️ Como Rodar o Projeto Localmente
+
+1. Certifique-se de ter o Python e o Django instalados na sua máquina.
+2. Navegue até a pasta do projeto (onde está o arquivo `manage.py`).
+3. No terminal, execute o comando para iniciar o servidor local:
+   ```bash
+   python manage.py runserver
